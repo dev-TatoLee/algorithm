@@ -9,17 +9,19 @@ public class Main {
             arr[i] = scanner.nextInt();
         }
 
-        int cnt=1;
-        while (cnt != 0){
-            cnt=0;
-            for (int i = 0; i < n-1; i++) {
+        int swap=1;
+        int cnt =0;
+        while (swap != 0){
+            swap=0;
+            for (int i = 0; i < n-1-cnt; i++) {
                 if (arr[i] > arr[i + 1]) {
                     int temp = arr[i];
                     arr[i] = arr[i + 1];
                     arr[i + 1] = temp;
-                    cnt++;
+                    swap++;
                 }
             }
+            cnt++;
         }
 
         for (int i = 0; i < n; i++) {
